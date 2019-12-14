@@ -17,10 +17,10 @@ button.on("click", function() {
     
 
     var filterUFOs = tableData.filter((ufo) => {
-        //console.log(ufo.datetime);
         return ufo.datetime === dateToFilter;
     });
-    console.log(filterUFOs);
+    
+    //console.log(filterUFOs);
     var testList = []
     filterUFOs.forEach((ufoEvent) => {
         var row = tbody.append("tr");
@@ -37,5 +37,5 @@ button.on("click", function() {
     
 
 });
-console.log(countries);
-// YOUR CODE HERE!
+//console.log(countries);
+
