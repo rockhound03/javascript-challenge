@@ -24,7 +24,7 @@ button.on("click", function() {
     var testList = []
     filterUFOs.forEach((ufoEvent) => {
         var row = tbody.append("tr");
-        row.append("td").text(ufoEvent.date);
+        row.append("td").text(ufoEvent.datetime);
         row.append("td").text(ufoEvent.city);
         row.append("td").text(ufoEvent.state);
         row.append("td").text(ufoEvent.country);
