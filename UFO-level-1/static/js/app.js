@@ -14,9 +14,13 @@ button.on("click", function() {
     var tbody = d3.select("tbody");
     tbody.html = "";
 
-    var filterUFOs = tableData.map((ufo) => {
+    
+
+    var filterUFOs = tableData.filter((ufo) => {
+        //console.log(ufo.datetime);
         return ufo.datetime === dateToFilter;
     });
+    console.log(filterUFOs);
     var testList = []
     filterUFOs.forEach((ufoEvent) => {
         var row = tbody.append("tr");
@@ -27,9 +31,9 @@ button.on("click", function() {
         row.append("td").text(ufoEvent.shape);
         row.append("td").text(ufoEvent.durationMinutes);
         row.append("td").text(ufoEvent.comments);
-        testList.push(ufoEvent.city);
+        testList.push(ufoEvent);
       });
-      console.log(testList);
+    //console.log(testList);
     
 
 });
