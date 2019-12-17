@@ -12,7 +12,7 @@ button.on("click", function() {
     var dateToFilter = inputElement.property("value");
 
     var tbody = d3.select("tbody");
-    tbody.html = "";
+    tbody.selectAll("*").remove();
 
     
 
